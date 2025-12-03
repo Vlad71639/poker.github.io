@@ -101,8 +101,8 @@
     :root{
       --bg:#060606;
       --card:#0b0b0b;
-      --accent:#ff2d2d;
-      --accent-600:#e02626;
+      --accent:#ff4757;
+      --accent-600:#ff4757;
       --muted:#bcbcbc;
       --text:#f4f4f4;
       --glass: rgba(255,255,255,0.03);
@@ -224,7 +224,7 @@
 
 
 .btn.promo{
-  background:linear-gradient(180deg,#ff4b4b,#c61616) !important;
+  background:linear-gradient(180deg,#ff4757,#ff4757) !important;
   color:#fff !important;
   font-weight:800;
 }
@@ -300,6 +300,30 @@ body::before {
     color: #ff4757;
     font-weight: bold;
 }
+
+/* fade-in animation */
+.fade-in {opacity:0;transform:translateY(20px);transition:opacity .8s ease, transform .8s ease;}
+.fade-in.visible {opacity:1;transform:translateY(0);}
+/* Floating Game Button */
+.floating-play {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #ff4757;
+  color: #fff;
+  padding: 16px 22px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 0 18px rgba(255,0,0,0.55);
+  transition: 0.3s ease;
+  z-index: 9999;
+}
+.floating-play:hover {
+  box-shadow: 0 0 25px rgba(255,255,255,0.75);
+  transform: scale(1.06);
+}
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -333,7 +357,6 @@ body::before {
 <meta content="/og-preview.png" property="og:image"/>
 <meta content="website" property="og:type"/>
 <meta content="https://poker-win.vercel.app/" property="og:url"/>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -385,7 +408,7 @@ body::before {
 <!-- small inline SVG logo -->
 <svg aria-hidden="true" fill="none" height="26" viewbox="0 0 24 24" width="26">
 <rect fill="none" height="21" rx="5" stroke="rgba(255,255,255,0.04)" width="21" x="1.5" y="1.5"></rect>
-<path d="M7 14c1.333-1 3-4 5-4s3.667 3 5 4" stroke="#ff2d2d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
+<path d="M7 14c1.333-1 3-4 5-4s3.667 3 5 4" stroke="#ff4757" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
 </svg>
 </div>
 <button class="burger" id="burgerBtn">
@@ -509,11 +532,11 @@ body::before {
 </div>
 </div>
 </section>
-<section aria-labelledby="start-heading" class="container fade-in" id="start">
+<section aria-labelledby="start-heading" class="container fade-in fade-in" id="start" style="max-width:900px;margin:60px auto;background:rgba(0,0,0,0.45);padding:30px;border-radius:18px;text-align:center;backdrop-filter:blur(6px);">
 <h2 class="fade-in" id="start-heading">Готовы начать?</h2>
 <p class="fade-in">Нажмите «Играть сейчас», создайте аккаунт и используйте промокод <strong>RISKBET</strong> для бонуса. Помните про ответственный подход и управление банкроллом.</p>
 <div class="fade-in" style="text-align:center;margin-top:18px">
-<a class="btn primary" href="https://1woxno.life/casino/list?open=register&amp;sub1=poker" rel="noopener noreferrer" target="_blank">Перейти к регистрации</a>
+<a class="btn primary" href="https://1woxno.life/casino/list?open=register&amp;sub1=poker" onmousedown="this.style.transform='scale(0.95)'" onmouseout="this.style.boxShadow='0 0 12px rgba(255,0,0,0.4)';" onmouseover="this.style.boxShadow='0 0 18px rgba(255,255,255,0.65)';" onmouseup="this.style.transform='scale(1)'" rel="noopener noreferrer" style="display:inline-block;width:260px;padding:14px 0;margin:10px;border-radius:12px;background:#ff4757;color:white;font-weight:600;font-size:18px;text-decoration:none;transition:0.3s ease;box-shadow:0 0 12px rgba(255,0,0,0.4);" target="_blank">Перейти к регистрации</a>
 <button class="btn ghost" id="copyPromoBtn">Скопировать промокод</button>
 </div>
 </section>
@@ -559,15 +582,25 @@ document.querySelectorAll('.faq-item').forEach(item=>{
 <h2 class="fade-in" style="margin-bottom:10px;">Покер онлайн — что важно знать</h2>
 <p class="fade-in">Покер онлайн — один из самых популярных форматов игры. Чтобы играть эффективно, выбирайте столы с подходящими лимитами, изучайте стиль соперников и используйте бонусы. Онлайн‑платформы дают возможность играть в любое время, участвовать в турнирах и повышать свой уровень мастерства.</p>
 </section>
-<div class="internal-links" style="max-width:900px;margin:40px auto;color:#fff;opacity:0.85;">
+<section style="max-width:900px;margin:60px auto;padding:25px;border-radius:20px;background:rgba(0,0,0,0.50);backdrop-filter:blur(6px);"><section class="mini-section" style="max-width:900px;margin:40px auto;background:rgba(0,0,0,0.45);padding:22px;border-radius:14px;color:#fff;line-height:1.6;">
+<h2>Покер онлайн — краткий ответ</h2>
+<p>Начни с низких лимитов, изучи комбинации, используй бонусы и анализируй игру соперников — это лучший старт для успешного покера онлайн.</p>
+</section><section class="mini-section" style="max-width:900px;margin:20px auto;background:rgba(0,0,0,0.45);padding:22px;border-radius:14px;color:#fff;line-height:1.6;">
+<h2>Частые ошибки новичков</h2>
+<ul style="margin-left:20px;">
+<li>Игра слишком многих стартовых рук</li>
+<li>Отсутствие банкролл-менеджмента</li>
+<li>Неверная оценка силы комбинаций</li>
+<li>Игра в тильте</li>
+</ul>
+</section><div class="internal-links" style="max-width:900px;margin:40px auto;color:#fff;opacity:0.85;">
 <p><strong>Полезные ссылки по покеру:</strong></p>
 <ul>
 <li><a href="#top" style="color:#ff4757;">Вернуться в начало страницы</a></li>
 <li><a href="#faq" style="color:#ff4757;">Перейти к вопросам и ответам</a></li>
 <li><a href="#start" style="color:#ff4757;">Начать играть в покер</a></li>
 </ul>
-</div>
-<footer role="contentinfo">
+</div></section><footer role="contentinfo">
 <div class="container fade-in" style="display:flex;flex-direction:column;align-items:center;gap:6px">
 <p class="fade-in">© 2025 Покер — Играть Онлайн. Играйте ответственно. Промокод: <strong>RISKBET</strong></p>
 <p class="legal fade-in">Данный ресурс носит информационный характер и не является онлайн-казино. Перед участием ознакомьтесь с правилами выбранной площадки и местным законодательством.</p>
@@ -719,5 +752,17 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 </script>
-</body>
+<script>
+function revealOnScroll() {
+  const elems = document.querySelectorAll('.fade-in');
+  const triggerBottom = window.innerHeight * 0.9;
+  elems.forEach(el => {
+    const rect = el.getBoundingClientRect().top;
+    if (rect < triggerBottom) el.classList.add('visible');
+  });
+}
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+</script>
+<a class="floating-play" href="https://1woxno.life/casino/list?open=register&amp;sub1=poker">Играть сейчас</a></body>
 </html>
