@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <link rel="icon" href="https://iimg.su/i/s2MP2r" />
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>Покер — Играть онлайн: турниры, стратегии, бонусы (RISKBET)</title>
@@ -210,73 +208,25 @@
       box-shadow:0 8px 28px rgba(0,0,0,0.6);opacity:0;transition:opacity 260ms ease, transform 260ms ease;
     }
     .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-  
-/* Premium Buttons Override */
-.btn{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:14px 24px;border-radius:14px;font-weight:700;
-  cursor:pointer;border:none;outline:none;letter-spacing:0.3px;
-  font-size:16px;transition:240ms cubic-bezier(.22,1,.36,1);
-}
-.btn.primary{
-  background:linear-gradient(180deg,#ff4b4b,#c61616);color:#fff;
-  box-shadow:0 10px 22px rgba(255,0,0,0.22),
-    inset 0 2px 4px rgba(255,255,255,0.25),
-    inset 0 -3px 6px rgba(0,0,0,0.35);
-}
-.btn.primary:hover{
-  transform:translateY(-4px);
-}
-.btn.secondary{
-  background:linear-gradient(180deg,#1a1a1a,#101010);color:#fff;
-}
-.btn.promo{
-  background:linear-gradient(180deg,#ff4b4b,#940404);
-  color:#fff;font-weight:800;letter-spacing:1px;
-}
-
-
-/* Burger menu */
-.burger{
-  display:none;flex-direction:column;gap:5px;
-  background:none;border:none;cursor:pointer;
-}
-.burger span{
-  width:24px;height:3px;background:#fff;border-radius:3px;
-  transition:0.3s;
-}
+  body{overflow-x:hidden;}
 
 @media(max-width:680px){
-  nav#mainNav{
-    position:absolute;top:70px;left:0;right:0;
-    background:#0b0b0b;flex-direction:column;
-    padding:20px;gap:20px;border-top:1px solid rgba(255,255,255,0.05);
-    transform:translateY(-120%);transition:0.35s;
+  header nav{
+    position:absolute;
+    top:70px;left:0;right:0;
+    background:#0b0b0b;
+    flex-direction:column;
+    padding:20px;
+    display:none;
   }
-  nav#mainNav.open{transform:translateY(0);}
-  .burger{display:flex;margin-left:auto;}
+  header nav.open{display:flex;}
+  .burger{display:flex;flex-direction:column;gap:5px;margin-left:auto;
+    background:none;border:none;cursor:pointer;}
+  .burger span{width:24px;height:3px;background:#fff;border-radius:3px;transition:.3s;}
+  .burger.active span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+  .burger.active span:nth-child(2){opacity:0;}
+  .burger.active span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
 }
-
-
-/* Burger animation */
-.burger.active span:nth-child(1){transform:translateY(8px) rotate(45deg);}
-.burger.active span:nth-child(2){opacity:0;}
-.burger.active span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
-
-/* Glass bottom bar */
-.mobile-bar{
-  position:fixed;bottom:0;left:0;right:0;
-  backdrop-filter:blur(12px);
-  background:rgba(20,20,20,0.55);
-  border-top:1px solid rgba(255,255,255,0.08);
-  padding:10px 20px;
-  display:flex;justify-content:space-around;
-  z-index:999; 
-}
-.mobile-bar a{
-  color:#fff;font-weight:700;text-decoration:none;
-}
-@media(min-width:700px){.mobile-bar{display:none;}}
 
 </style>
 </head>
@@ -542,19 +492,8 @@
 <script>
 const burger=document.getElementById('burgerBtn');
 const nav=document.getElementById('mainNav');
-burger.addEventListener('click',()=>nav.classList.toggle('open'));
-</script>
-
-
-<div class="mobile-bar">
-  <a href="#features">Преимущества</a>
-  <a href="#content-faq">FAQ</a>
-  <a href="#start">Старт</a>
-</div>
-
-
-<script>
 burger.addEventListener('click',()=>{
+  nav.classList.toggle('open');
   burger.classList.toggle('active');
 });
 </script>
