@@ -305,7 +305,6 @@ body::before {
 .fade-in {opacity:0;transform:translateY(20px);transition:opacity .8s ease, transform .8s ease;}
 .fade-in.visible {opacity:1;transform:translateY(0);}
 /* Floating Game Button */
-.floating-play {
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -320,47 +319,39 @@ body::before {
   transition: 0.3s ease;
   z-index: 9999;
 }
-.floating-play:hover {
   box-shadow: 0 0 25px rgba(255,255,255,0.75);
   transform: scale(1.06);
 }
 
 /* mobile collapsed play button */
 @media (max-width: 600px){
-  .floating-play{
     width:60px!important;
     padding:14px!important;
     border-radius:50%!important;
   }
-  .floating-play .play-label{
     display:none;
   }
-  .floating-play.expanded{
     width:200px!important;
     border-radius:50px!important;
   }
-  .floating-play.expanded .play-label{
     display:inline-block!important;
     margin-left:8px;
   }
 }
 
 /* Poker chip visual effects */
-  .floating-play{
     border:3px solid #ff4757;
   }
     0%{box-shadow:0 0 0 rgba(255,71,87,0.6);}
     50%{box-shadow:0 0 18px rgba(255,71,87,0.9);}
     100%{box-shadow:0 0 0 rgba(255,71,87,0.6);}
   }
-  .floating-play.expanded{
   }
     from{transform:rotate(0deg) scale(1);}
     to{transform:rotate(360deg) scale(1.05);}
   }
 }
 
-@media(max-width:600px){ .floating-play{display:none!important;} }
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -801,7 +792,7 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 </script>
-<a class="floating-play" href="https://1woxno.life/casino/list?open=register&amp;sub1=poker" style="background:#ff4757;color:white;padding:16px 24px;border-radius:50px;font-size:20px;font-weight:700;text-decoration:none;box-shadow:0 0 14px rgba(255,71,87,0.5);transition:0.3s ease;">Играть сейчас</a>
+
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
   const btn=document.querySelector('.floating-play');
