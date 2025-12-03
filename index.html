@@ -235,6 +235,49 @@
   color:#fff;font-weight:800;letter-spacing:1px;
 }
 
+
+/* Burger menu */
+.burger{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:none;cursor:pointer;
+}
+.burger span{
+  width:24px;height:3px;background:#fff;border-radius:3px;
+  transition:0.3s;
+}
+
+@media(max-width:680px){
+  nav#mainNav{
+    position:absolute;top:70px;left:0;right:0;
+    background:#0b0b0b;flex-direction:column;
+    padding:20px;gap:20px;border-top:1px solid rgba(255,255,255,0.05);
+    transform:translateY(-120%);transition:0.35s;
+  }
+  nav#mainNav.open{transform:translateY(0);}
+  .burger{display:flex;margin-left:auto;}
+}
+
+
+/* Burger animation */
+.burger.active span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+.burger.active span:nth-child(2){opacity:0;}
+.burger.active span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+
+/* Glass bottom bar */
+.mobile-bar{
+  position:fixed;bottom:0;left:0;right:0;
+  backdrop-filter:blur(12px);
+  background:rgba(20,20,20,0.55);
+  border-top:1px solid rgba(255,255,255,0.08);
+  padding:10px 20px;
+  display:flex;justify-content:space-around;
+  z-index:999; 
+}
+.mobile-bar a{
+  color:#fff;font-weight:700;text-decoration:none;
+}
+@media(min-width:700px){.mobile-bar{display:none;}}
+
 </style>
 </head>
 <body>
@@ -251,6 +294,10 @@
               <path d="M7 14c1.333-1 3-4 5-4s3.667 3 5 4" stroke="#ff2d2d" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
+<button class="burger" id="burgerBtn">
+  <span></span><span></span><span></span>
+</button>
+
           <div class="title">Покер — Играть Онлайн</div>
         </a>
       </div>
@@ -491,5 +538,27 @@
       // Simple client-side performance note: defer non-critical actions (no heavy libs)
     })();
   </script>
+
+<script>
+const burger=document.getElementById('burgerBtn');
+const nav=document.getElementById('mainNav');
+burger.addEventListener('click',()=>nav.classList.toggle('open'));
+</script>
+
+
+<div class="mobile-bar">
+  <a href="#features">Преимущества</a>
+  <a href="#content-faq">FAQ</a>
+  <a href="#start">Старт</a>
+</div>
+
+
+<script>
+burger.addEventListener('click',()=>{
+  burger.classList.toggle('active');
+});
+</script>
+
 </body>
 </html>
+
