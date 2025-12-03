@@ -228,6 +228,13 @@
   .burger.active span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
 }
 
+
+.btn.promo{
+  background:linear-gradient(180deg,#ff4b4b,#c61616) !important;
+  color:#fff !important;
+  font-weight:800;
+}
+
 </style>
 </head>
 <body>
@@ -498,6 +505,17 @@ burger.addEventListener('click',()=>{
 });
 </script>
 
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const burger=document.getElementById('burgerBtn');
+  const nav=document.getElementById('mainNav');
+  burger.onclick=()=>{
+    nav.classList.toggle('open');
+    burger.classList.toggle('active');
+  };
+});
+</script>
+
 </body>
 </html>
-
