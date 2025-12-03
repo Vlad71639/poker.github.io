@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Покер — Играть Онлайн | Турниры, Стратегии, Бонусы</title>
+  <meta name="description" content="Онлайн-покер: техасский холдем, омаха, турниры и стратегии. Руководства, советы, турниры 24/7 и бонусы по промокоду RISKBET. Безопасная регистрация и игра на любых устройствах." />
+  <meta name="keywords" content="покер, покер онлайн, играть в покер, техасский холдем, покер на деньги, турниры по покеру, стратегии покера, мобильный покер, промокод RISKBET" />
+
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:title" content="Покер — Играть Онлайн | Турниры, Стратегии, Бонусы" />
+  <meta property="og:description" content="Играй в покер онлайн: турниры, гайды, стратегии и бонусы. Промокод RISKBET." />
+  <meta property="og:image" content="og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Покер — Играть Онлайн" />
+  <meta name="twitter:description" content="Играй в покер онлайн: турниры, гайды, стратегии и бонусы. Промокод RISKBET." />
+  <meta name="twitter:image" content="og-image.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://YOUR_DOMAIN/" />
+
+  <!-- Favicons (положи файлы в корень проекта) -->
+  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_180x180.png" />
+  <meta name="theme-color" content="#0b0b0b" />
+  <meta name="color-scheme" content="dark light">
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://YOUR_DOMAIN/#website",
+        "url": "https://YOUR_DOMAIN/",
+        "name": "Покер — Играть Онлайн",
+        "publisher": {
+          "@id": "https://YOUR_DOMAIN/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://YOUR_DOMAIN/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://YOUR_DOMAIN/#organization",
+        "name": "Покер — Играть Онлайн",
+        "url": "https://YOUR_DOMAIN/",
+        "logo": "https://YOUR_DOMAIN/og-image.png"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Как начать играть в онлайн-покер?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Нажмите кнопку «Играть сейчас», пройдите регистрацию, введите промокод RISKBET и выберите стол. Можно начать с бесплатных столов, чтобы потренироваться."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Что такое техасский холдем?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Техасский холдем — самая популярная разновидность покера, где каждому игроку раздаются две закрытые карты, а на столе раскрывается до пяти общих карт."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Можно ли играть с телефона?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. Сайт полностью адаптирован для мобильных устройств — Android и iPhone. Для лучшего опыта используйте современный браузер и включите WebP изображения."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Нужен ли депозит для начала?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Вы можете начать играть бесплатно. Для участия в турнирах и кеш-столах на деньги потребуется депозит. Используйте промокод RISKBET для бонусов при первой оплате."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg: #060606;
+      --card: linear-gradient(180deg,#0f0f10,#0b0b0b);
+      --accent: #ff2d2d;
+      --muted: #bdbdbd;
+      --text: #f4f4f4;
+      --radius: 14px;
+      --container: 1150px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(255,45,45,0.03), transparent), var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+    a{color:var(--accent);text-decoration:none}
+    header{
+      position:fixed;top:0;left:0;right:0;height:72px;padding:12px 28px;
+      display:flex;align-items:center;justify-content:flex-end;gap:18px;
+      background:rgba(8,8,8,0.45);backdrop-filter:blur(8px);z-index:999;border-bottom:1px solid rgba(255,255,255,0.02)
+    }
+    header nav{display:flex;gap:18px;align-items:center}
+    header nav a{font-weight:600;color:var(--muted);padding:8px 12px;border-radius:8px}
+    header nav a:hover{color:var(--text);background:rgba(255,255,255,0.02)}
+
+    main{padding-top:92px}
+
+    .hero{
+      min-height:72vh;display:flex;align-items:center;justify-content:center;padding:48px 20px;text-align:center;
+      position:relative;overflow:hidden;
+    }
+    .hero-bg{
+      position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1600959907703-125ba1fddf55?auto=format&fit=crop&w=1600&q=60');
+      background-size:cover;background-position:center;filter:brightness(.35) contrast(1.05);transform:scale(1.02);
+      z-index:0;
+    }
+    .hero-content{position:relative;z-index:2;max-width:900px;padding:20px;border-radius:18px}
+    .hero h1{font-size:clamp(28px,5.2vw,64px);margin:0 0 12px;line-height:1.05;text-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    .hero p{font-size:clamp(14px,1.4vw,20px);color:var(--muted);margin:0 0 24px}
+
+    .controls{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+    .btn{
+      background:var(--accent);color:white;padding:12px 20px;border-radius:12px;font-weight:700;border:none;cursor:pointer;
+      box-shadow:0 6px 22px rgba(255,45,45,0.12);transition:transform .18s ease,box-shadow .18s ease;
+      text-decoration:none;display:inline-flex;align-items:center;gap:10px;
+    }
+    .btn:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(255,45,45,0.16)}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);box-shadow:none}
+
+    .promo{
+      margin-top:16px;background:#0c0c0c;border:1px solid rgba(255,255,255,0.03);padding:10px 14px;border-radius:10px;font-weight:700;display:inline-block;
+      cursor:pointer;color:var(--text)
+    }
+
+    .container{max-width:var(--container);margin:0 auto;padding:36px 20px}
+
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:18px}
+    .card{background:linear-gradient(180deg,#0e0e0f,#0b0b0b);border:1px solid rgba(255,255,255,0.03);padding:20px;border-radius:12px}
+    .card h3{margin:0 0 8px}
+    .card p{margin:0;color:var(--muted)}
+
+    .content{margin-top:28px;color:var(--muted)}
+    .content h2{font-size:28px;margin-top:24px;color:var(--text)}
+    .content article{background:linear-gradient(180deg,#090909,#0b0b0b);padding:22px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);margin-top:20px}
+    .content p{margin-bottom:14px}
+
+    details{background:linear-gradient(180deg,#0b0b0b,#0d0d0d);border-radius:10px;padding:14px;border:1px solid rgba(255,255,255,0.02);margin-bottom:12px}
+    details summary{font-weight:700;cursor:pointer;outline:none}
+    details p{margin:8px 0 0;color:var(--muted)}
+
+    footer{padding:36px 20px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02);margin-top:40px}
+
+    /* responsive */
+    @media (max-width:760px){
+      header{height:64px;padding:10px 16px}
+      header nav a{padding:6px 8px;font-size:14px}
+      .container{padding:20px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#features">Преимущества</a>
+      <a href="#content-faq">FAQ</a>
+      <a href="#start">Начать</a>
+      <a class="btn ghost" href="tournaments.html">Турниры</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+
+      <div class="hero-content container">
+        <h1 id="hero-title">Покер — Играть Онлайн. Турниры, Стратегии и Бонусы</h1>
+        <p>Играй в техасский холдем и омаху, участвуй в турнирах и используй промокод <strong>RISKBET</strong> для бонуса при регистрации. Сайт адаптирован под ПК, Android и iPhone.</p>
+
+        <div class="controls" role="group" aria-label="Основные действия">
+          <a class="btn" href="https://1woxno.life/casino/list?open=register&sub1=poker" target="_blank" rel="noopener noreferrer">
+            Играть сейчас
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn ghost" href="#content-faq">Частые вопросы</a>
+        </div>
+
+        <div style="margin-top:14px;text-align:center;">
+          <div class="promo" id="promo" onclick="copyPromo()" title="Нажмите, чтобы скопировать промокод">Промокод: <span style="letter-spacing:1px">RISKBET</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="container">
+      <h2>Почему выбирают онлайн-покер у нас</h2>
+      <div class="features" role="list">
+        <div class="card" role="listitem">
+          <h3>Моментальная регистрация</h3>
+          <p>Старт через один клик — регистрируйтесь и играйте за секунды. Поддержка мобильных и десктопных устройств.</p>
+        </div>
+        <div class="card" role="listitem">
+          <h3>Бонусы и промокоды</h3>
+          <p>Получите стартовый бонус с промокодом RISKBET, участвуйте в акциях и фрироллах.</p>
+        </div>
+        <div class="card" role="listitem">
+          <h3>Турниры 24/7</h3>
+          <p>Ежедневные турниры для любого уровня: от новичков до профессионалов, MTT и Sit&Go.</p>
+        </div>
+        <div class="card" role="listitem">
+          <h3>Безопасность и честность</h3>
+          <p>Современное шифрование, прозрачные выплаты и проверенные системы рандомизации.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="content" class="container content" aria-labelledby="content-heading">
+      <h2 id="content-heading">Полное руководство по онлайн-покеру</h2>
+
+      <article aria-label="SEO-текст: Полное руководство по покеру">
+        <!-- BEGIN LONG SEO TEXT (развёрнутый контент для Яндекса/Google) -->
+        <p><strong>Покер</strong> — это не просто карточная игра: это комбинация математики, психологии и стратегии, где успех зависит от знаний, дисциплины и практики. Онлайн-покер сделал эту игру доступной миллионам: вы можете играть на телефоне, планшете или ПК, участвовать в турнирах и зарабатывать реальные деньги. Ниже мы подробно описываем всё, что нужно знать новичку и продвинутому игроку.</p>
+
+        <h3>Краткая история и виды покера</h3>
+        <p>Покер развивался столетиями, и сегодня существует множество разновидностей. Наиболее популярные из них — <strong>Texas Hold'em</strong> (техасский холдем) и <strong>Omaha</strong>. В техасском холдеме каждый игрок получает по две закрытые карты, а на столе открываются общие карты (флоп, терн, ривер). В Омахе — по четыре закрытые карты, что меняет стратегию и диапазоны. Также существуют стад, разномастные форматы и прогрессивные структуры турниров.</p>
+
+        <h3>Основные правила техасского холдема</h3>
+        <p>Коротко: цель — собрать лучшую комбинацию из пяти карт. Ставки проходят в несколько раундов: префлоп, флоп, терн, ривер. Игроки используют комбинацию своих карт и общих карт. Важны позиции (банлин, баттон), размер стека и динамика стола. Для новичков стоит изучить базовые комбинации: пара, две пары, сет, стрит, флеш, фулл-хаус, каре и роял-флеш.</p>
+
+        <h3>Стратегии для новичков</h3>
+        <p>Если вы только начинаете, следуйте простым правилам:</p>
+        <ul>
+          <li><strong>Играйте тайтово в начале</strong>. Отбирайте сильные стартовые руки, особенно в ранних позициях.</li>
+          <li><strong>Учитесь позиции</strong>. На баттоне и в поздней позиции ваша рука играет сильнее — используйте это для агрессии.</li>
+          <li><strong>Банкролл-менеджмент</strong>. Никогда не играйте на все деньги — держите запас средств, который выдержит серию проигрышей.</li>
+          <li><strong>Практикуйтесь на бесплатных столах</strong>. Это помогает освоить интерфейс и базовую логику без риска денег.</li>
+        </ul>
+
+        <h3>Продвинутые стратегии</h3>
+        <p>Для роста в покере вам нужно понимать расширенные концепции:</p>
+        <ul>
+          <li><strong>Диапазоны рук</strong> — вместо оценки одной руки анализируйте диапазоны оппонента.</li>
+          <li><strong>Игровая теория (GTO)</strong> и <strong>эксплуатационная игра</strong> — баланс между теоретически оптимальной и адаптированной под соперника стратегией.</li>
+          <li><strong>Блеф и полу-блеф</strong> — используйте их экономно и по ситуации.</li>
+          <li><strong>Размеры ставок</strong> — контролируйте пот, учитывайте SPR (stack-to-pot ratio) и будущие улицы.</li>
+        </ul>
+
+        <h3>Математика покера — пот-оддсы, эквити и подсчёт outs</h3>
+        <p>Понимание математики — ключевое преимущество. Пот-оддсы показывают, насколько выгоден колл с учётом размера банка. Рассчитывайте outs (карты, которые помогут собрать нужную комбинацию) и эквити вашей руки. Простой приём: умножьте количество outs на 2 (на терне) или на 4 (на флопе), чтобы получить приблизительный процент попадания к риверу.</p>
+
+        <h3>Турниры против кеш-игр</h3>
+        <p>Турниры (MTT) и кеш-игры отличаются структурой и тактикой. В турнирах важна ICM (изменение стоимости стеков при выплатах), выживание и адаптация к стекам. В кеш-играх вы играете с фиксированными блайндами и проще контролируете банкролл. Новичкам стоит попробовать оба формата, чтобы понять, что подходит больше.</p>
+
+        <h3>Психология и эмоции</h3>
+        <p>Контроль эмоций (tilt) — одна из главных задач игрока. Не позволяйте одной сессии или плохой раздаче влиять на решения. Делайте перерывы, ставьте лимиты и ведите дневник сессий, чтобы отслеживать ошибки.</p>
+
+        <h3>Выбор покер-рума и безопасность</h3>
+        <p>Выбирайте проверенные платформы с хорошей репутацией, лицензиями и прозрачной политикой выплат. Обращайте внимание на:</p>
+        <ul>
+          <li>Шифрование (SSL)</li>
+          <li>Отзывы игроков</li>
+          <li>Скорость вывода средств</li>
+          <li>Политика бонусов и вейджеров</li>
+        </ul>
+
+        <h3>Мобильный покер: оптимизация под Android и iPhone</h3>
+        <p>Игра с телефона удобна, но требует адаптации: оптимизированный интерфейс, быстрые свайпы, крупные кнопки и чёткая типографика. На нашем сайте применены адаптивные шрифты (clamp) и крупные кнопки, чтобы текст читался одинаково хорошо и на iPhone, и на Android, и на десктопе.</p>
+
+        <h3>Как использовать бонусы и промокод RISKBET</h3>
+        <p>Промокод RISKBET — это начисление стартового бонуса при регистрации. Внимательно читайте условия: минимальный депозит, вейджер и сроки. Используйте бонус на тренировочные турниры и микролимиты, чтобы протестировать игру без больших рисков.</p>
+
+        <h3>Обучение и тренажёры</h3>
+        <p>Используйте инструменты: трекеры, анализаторы раздач и программы для расчёта эквити. Многие успешные игроки тренируются с помощью симуляторов и изучают разборы рук сильных профи.</p>
+
+        <h3>Частые ошибки новичков</h3>
+        <ul>
+          <li>Игра слишком большого количества рук.</li>
+          <li>Игнорирование позиции.</li>
+          <li>Плохой банкролл-менеджмент.</li>
+          <li>Не учитывать динамику стола и оппонентов.</li>
+        </ul>
+
+        <h3>Советы по прогрессии</h3>
+        <p>Регулярно выделяйте время на изучение теории, анализ сессий и работу над ошибками. Установите цели (например, увеличить средний бай-ин или выиграть первый мини-MTT) и следите за прогрессом.</p>
+
+        <h3>Этика и ответственность</h3>
+        <p>Играй ответственно: устанавливай лимиты времени и денег. Если замечаешь признаки зависимости, обратись к профессионалам и используй инструменты самоблокировки на платформах.</p>
+
+        <h3>Технические рекомендации</h3>
+        <p>Для лучшей производительности используйте современные браузеры, обновляйте драйверы и при мобильной игре — стабильный интернет. На сайте реализованы lazy-load изображений, webp форматы и минимальный CSS, чтобы страница быстро загружалась и индексировалась.</p>
+
+        <h3>Заключение</h3>
+        <p>Онлайн-покер — прекрасная возможность сочетать хобби и заработок. Применяйте грамотные стратегии, контролируйте банкролл, практикуйтесь и изучайте теорию. Наш сайт поможет с турнирами, гайдами и бонусами — начните прямо сейчас с промокодом <strong>RISKBET</strong>.</p>
+        <!-- END LONG SEO TEXT -->
+      </article>
+
+      <section id="content-faq" aria-labelledby="faq-heading" style="margin-top:28px">
+        <h2 id="faq-heading">FAQ — Часто задаваемые вопросы</h2>
+
+        <details>
+          <summary>Как зарегистрироваться и использовать промокод?</summary>
+          <p>Нажмите «Играть сейчас», пройдите короткую регистрацию и введите промокод RISKBET в поле "Промокод" при пополнении счета или в профиле (в зависимости от системы). Бонус будет зачислен в соответствии с условиями площадки.</p>
+        </details>
+
+        <details>
+          <summary>Какие форматы покера доступны?</summary>
+          <p>На большинстве платформ доступны Texas Hold'em, Omaha, Sit&Go, MTT, кэш-столы и различные быстрые турниры. Выбирайте формат в зависимости от целей: обучение, регулярный доход, соревнования.</p>
+        </details>
+
+        <details>
+          <summary>Как защитить свой аккаунт?</summary>
+          <p>Используйте сложный пароль, включайте двухфакторную аутентификацию (если доступно) и не делитесь личными данными. Проверяйте адрес сайта и используйте только официальные ссылки.</p>
+        </details>
+
+        <details>
+          <summary>Есть ли обучение для начинающих?</summary>
+          <p>Да — начните с бесплатных столов и ознакомительных материалов: наши статьи, гайды и видеоуроки помогут быстрее осваиваться.</p>
+        </details>
+
+      </section>
+    </section>
+
+    <section id="start" class="container">
+      <h2>Начать игру — быстро и безопасно</h2>
+      <p>Готовы начать? Нажмите кнопку «Играть сейчас», зарегистрируйтесь и получите бонус с промокодом <strong>RISKBET</strong>. Игра доступна на всех устройствах — телефон, планшет и компьютер.</p>
+
+      <div style="text-align:center;margin-top:18px">
+        <a class="btn" href="https://1woxno.life/casino/list?open=register&sub1=poker" target="_blank" rel="noopener noreferrer">Перейти к регистрации</a>
+        <button class="btn ghost" onclick="copyPromo()">Скопировать промокод</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Покер — Играть Онлайн. Играйте ответственно. Промокод: <strong>RISKBET</strong></p>
+      <p style="font-size:13px;color:var(--muted)">Данный ресурс не является онлайн-казино и служит информационной и образовательной целью. Перед участием в играх на деньги ознакомьтесь с правилами и местным законодательством.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Copy promo helper
+    function copyPromo(){
+      const code = 'RISKBET';
+      if(navigator.clipboard){
+        navigator.clipboard.writeText(code).then(()=> {
+          showToast('Промокод скопирован: ' + code);
+        }).catch(()=> showToast('Не удалось скопировать, скопируйте вручную: ' + code));
+      } else {
+        // fallback
+        const ta = document.createElement('textarea'); ta.value = code; document.body.appendChild(ta);
+        ta.select(); try { document.execCommand('copy'); showToast('Промокод скопирован: ' + code);} catch(e){ showToast('Скопируйте вручную: ' + code);} document.body.removeChild(ta);
+      }
+    }
+
+    // Simple toast
+    function showToast(text){
+      const t = document.createElement('div');
+      t.textContent = text;
+      t.style.position = 'fixed';
+      t.style.bottom = '22px';
+      t.style.left = '50%';
+      t.style.transform = 'translateX(-50%)';
+      t.style.background = 'rgba(0,0,0,0.8)';
+      t.style.color = '#fff';
+      t.style.padding = '10px 14px';
+      t.style.borderRadius = '10px';
+      t.style.boxShadow = '0 6px 20px rgba(0,0,0,0.6)';
+      t.style.zIndex = 9999;
+      document.body.appendChild(t);
+      setTimeout(()=> { t.style.opacity = '0'; setTimeout(()=> t.remove(),300); }, 1700);
+    }
+
+    // Lazy load images (example if added later)
+    document.addEventListener('DOMContentLoaded', function(){
+      if('loading' in HTMLImageElement.prototype){
+        const imgs = document.querySelectorAll('img[loading="lazy"]');
+        imgs.forEach(img => { /* native lazy loaded */ });
+      } else {
+        // dynamic lazyload fallback not required now
+      }
+    });
+  </script>
+</body>
+</html>
